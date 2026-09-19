@@ -141,6 +141,19 @@
     .hp-trust .marquee .logos + .logos{display:flex}
   }
   @keyframes logoscroll{to{transform:translateX(-50%)}}
+  /* split CTA card with photo (home) */
+  .cta-card--split{display:flex;align-items:stretch;gap:0;text-align:left;padding:0;overflow:hidden;max-width:840px;margin:0 auto}
+  .cta-card--split .cta-card__photo{flex:0 0 40%}
+  .cta-card--split .cta-card__photo img{width:100%;height:100%;object-fit:cover;object-position:50% 28%;display:block}
+  .cta-card--split .cta-card__body{flex:1;padding:44px 40px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+  .cta-card--split .cta-card__body h2{margin-top:0}
+  .cta-card--split .cta-card__body p{margin:0 0 24px;max-width:none}
+  @media (max-width:640px){
+    .cta-card--split{flex-direction:column;max-width:420px}
+    .cta-card--split .cta-card__photo{flex:none;max-height:260px}
+    .cta-card--split .cta-card__body{padding:30px 26px;align-items:center;text-align:center}
+    .cta-card--split .cta-card__body p{margin-left:auto;margin-right:auto}
+  }
 </style>
 <style id="ik-harmony">
   html{scroll-behavior:smooth}
@@ -538,10 +551,13 @@
     <!-- begin footer -->
 <section class="cta-band" id="kapcsolat">
   <div class="container"><div class="row"><div class="col col-12">
-    <div class="cta-card">
+    <div class="cta-card cta-card--split">
+      <div class="cta-card__photo"><img src="/images/isti-speaking.jpg" alt="Kis István előadás közben" loading="lazy"></div>
+      <div class="cta-card__body">
       <h2><span class="ik-hu">Dolgozzunk együtt</span><span class="ik-en">Let’s work together</span></h2>
       <p><span class="ik-hu">Rendszert vagy csapatot építenél, esetleg egy külső nézőpont kellene? Foglalj egy rövid beszélgetést.</span><span class="ik-en">Building systems or teams, or just want an outside perspective? Book a short call.</span></p>
       <a class="cta-btn" href="https://meet.istvankis.com" target="_blank" rel="noopener"><span class="ik-hu">Beszéljünk</span><span class="ik-en">Let’s talk</span> <i class="ion ion-md-arrow-round-forward"></i></a>
+      </div>
     </div>
   </div></div></div>
 </section>
