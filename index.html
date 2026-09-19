@@ -122,6 +122,22 @@
   .edu p{font-size:.92rem;color:var(--text-alt-color);margin:0 0 8px;line-height:1.55}
   .edu a{color:var(--ik-brand);text-decoration:none}
   .edu .muted{margin-top:18px;padding-top:18px;border-top:1px solid var(--border-color);font-size:.86rem}
+  /* experience trustbar (from istvankis.com splash) */
+  .hp-trust{padding:4px 0;margin:0 0 8px}
+  .hp-trust__label{text-align:center;font-family:Inter,sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--text-alt-color);margin:0 0 26px}
+  .hp-trust__logos{max-width:100%}
+  .hp-trust .marquee{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:16px 44px}
+  .hp-trust .logos{display:contents;list-style:none;margin:0;padding:0}
+  .hp-trust .logos + .logos{display:none}
+  .hp-trust .logos li{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:clamp(15px,1.5vw,19px);color:var(--ik-navy);opacity:.55;letter-spacing:.005em;transition:opacity .2s;white-space:nowrap}
+  .hp-trust .logos li:hover{opacity:.9}
+  @media (max-width:720px){
+    .hp-trust__logos{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent)}
+    .hp-trust .marquee{flex-wrap:nowrap;justify-content:flex-start;width:max-content;gap:0;animation:logoscroll 24s linear infinite}
+    .hp-trust .marquee .logos{display:flex;flex-wrap:nowrap;align-items:center;gap:0 30px;padding-right:30px}
+    .hp-trust .marquee .logos + .logos{display:flex}
+  }
+  @keyframes logoscroll{to{transform:translateX(-50%)}}
 </style>
 <style id="ik-harmony">
   /* --- Harmonized with coaching.istvankis.com + istvankis.com splash --- */
@@ -441,6 +457,20 @@
   </div>
 </section>
 <!-- end hero -->
+
+<!-- begin experience trustbar -->
+<section class="hp-trust" aria-label="Szakmai háttér / Professional background">
+  <div class="container"><div class="row"><div class="col col-12">
+    <p class="hp-trust__label"><span class="ik-hu">Közel 20 év tapasztalatom van</span><span class="ik-en">I have nearly 20 years of experience</span></p>
+    <div class="hp-trust__logos">
+      <div class="marquee">
+        <ul class="logos"><li>Allianz</li><li>CIB Bank</li><li>Danubius</li><li>Intesa Sanpaolo</li><li>MediaSpecs</li><li>OTP Bank</li><li>Uniqa</li></ul>
+        <ul class="logos" aria-hidden="true"><li>Allianz</li><li>CIB Bank</li><li>Danubius</li><li>Intesa Sanpaolo</li><li>MediaSpecs</li><li>OTP Bank</li><li>Uniqa</li></ul>
+      </div>
+    </div>
+  </div></div></div>
+</section>
+<!-- end experience trustbar -->
 
 <!-- begin professional background -->
 <section class="hp-exp">
