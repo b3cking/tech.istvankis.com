@@ -74,7 +74,7 @@
   html{scroll-behavior:smooth}
   #szakmai-hatter,#kapcsolat{scroll-margin-top:78px}
   .header{position:sticky;top:0;z-index:200;background:var(--background-color);border-bottom:1px solid var(--border-color)}
-  .header__inner{padding:28px 20px !important;transition:padding .22s ease,box-shadow .22s ease}
+  .header__inner{padding:22px 20px !important;transition:padding .2s ease,box-shadow .2s ease}
   .header.is-stuck .header__inner{padding:12px 20px !important}
   .header.is-stuck{box-shadow:0 2px 12px rgba(16,40,80,.07)}
   /* --- Harmonized with coaching.istvankis.com + istvankis.com splash --- */
@@ -429,7 +429,7 @@
   </div>
 </div>
 <script>(function(){var m=document.getElementById('ctaModal');if(!m)return;var f=m.querySelector('.cta-modal__iframe');function open(u){f.src=u;m.classList.add('open');document.body.style.overflow='hidden';}function close(){m.classList.remove('open');f.src='about:blank';document.body.style.overflow='';}document.addEventListener('click',function(e){var a=e.target.closest('a[href^="https://meet.istvankis.com"]');if(a){e.preventDefault();open(a.getAttribute('href'));}else if(e.target.closest('.cta-modal__close')||e.target===m){close();}});document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});})();</script>
-<script>(function(){var h=document.querySelector(".header");if(!h)return;function u(){h.classList.toggle("is-stuck",window.scrollY>16);}u();window.addEventListener("scroll",u,{passive:true});})();</script>
+<script>(function(){var h=document.querySelector(".header");if(!h)return;var s=false,t;function u(){var y=window.pageYOffset||document.documentElement.scrollTop||0;if(!s&&y>120){s=true;h.classList.add("is-stuck");}else if(s&&y<50){s=false;h.classList.remove("is-stuck");}}function o(){if(t)return;t=requestAnimationFrame(function(){t=0;u();});}u();window.addEventListener("scroll",o,{passive:true});})();</script>
 </body>
 
 </html>
