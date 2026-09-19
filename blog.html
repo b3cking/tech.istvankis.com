@@ -61,61 +61,60 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style id="tech-landing">
-  /* --- Smooth bridge from istvankis.com splash --> tech landing --- */
-  .hero{background:linear-gradient(180deg,#f4f5fb 0%,#ffffff 100%);padding:72px 0 60px;margin-bottom:52px;border-bottom:1px solid var(--border-color)}
-  [dark] .hero{background:linear-gradient(180deg,#141a2b 0%,var(--background-color) 100%);border-bottom-color:var(--border-color-alt)}
-  .hp-kicker{display:inline-block;margin-bottom:18px;font-family:'Space Mono',monospace;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--brand-color);font-weight:700}
-  .hero__title.hp-title{font-family:'Source Serif 4',Georgia,serif;text-transform:none;font-weight:700;letter-spacing:-.5px;font-size:56px;line-height:1.04em;margin-bottom:22px}
+  /* home + blog intro, harmonized with coaching */
+  .hero{background:linear-gradient(180deg,#EBF1FA 0%,#F6F9FD 100%);padding:76px 0 64px;margin-bottom:56px;border-bottom:1px solid var(--border-color)}
+  .hero__left .hero__image{box-shadow:0 24px 60px rgba(11,30,59,.16),0 8px 24px rgba(11,30,59,.09) !important;border-radius:22px}
+  .hero__left .hero__image img{border-radius:22px}
+  .hp-kicker{display:inline-block;margin-bottom:18px;font-family:Inter,sans-serif;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ik-brand-600);font-weight:600}
+  .hero__title.hp-title{font-family:"Source Serif 4",Georgia,serif;text-transform:none;font-weight:600;letter-spacing:-.015em;font-size:56px;line-height:1.05em;margin-bottom:22px;color:var(--dark-blue)}
   @media (max-width:1024px){.hero__title.hp-title{font-size:46px}}
   @media (max-width:600px){.hero__title.hp-title{font-size:34px}}
-  .hero__description.hp-lead{font-size:19px;line-height:1.6;color:var(--text-color);max-width:540px}
-  .hero__description.hp-lead strong{font-weight:600;color:var(--heading-font-color)}
-  .hp-cta{display:flex;align-items:center;flex-wrap:wrap;gap:22px;margin:28px 0 4px}
-  .hp-btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:14px;background:var(--brand-color);color:#fff;font-weight:600;font-size:16px;border:1px solid var(--brand-color);transition:all .25s;text-decoration:none}
-  .hp-btn:hover{transform:translate3d(3px,-3px,0);box-shadow:-4px 4px 0 var(--heading-font-color);color:#fff}
+  .hero__description.hp-lead{font-size:19px;line-height:1.7;color:var(--text-color);max-width:560px}
+  .hero__description.hp-lead strong{font-weight:600;color:var(--dark-blue)}
+  .hp-cta{display:flex;align-items:center;flex-wrap:wrap;gap:22px;margin:30px 0 4px}
+  .hp-btn{display:inline-flex;align-items:center;gap:9px;padding:15px 26px;border-radius:999px;background:var(--ik-brand-600);color:#fff;font-weight:600;font-size:16px;border:1.5px solid transparent;box-shadow:0 8px 22px rgba(37,99,201,.30);transition:transform .18s var(--ik-ease),box-shadow .25s var(--ik-ease),background .2s var(--ik-ease)}
+  .hp-btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(37,99,201,.36);color:#fff;background:var(--ik-brand)}
   .hp-btn i{font-size:18px;line-height:1}
   .hp-back{font-size:15px;color:var(--text-alt-color);text-decoration:none;transition:color .2s}
-  .hp-back:hover{color:var(--brand-color)}
-  .hero__contact{margin-top:24px}
-  .hp-themes{margin-bottom:4px}
-  .hp-chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px}
-  .hp-chip{display:inline-block;padding:8px 16px;border:1px solid var(--border-color);border-radius:999px;font-size:14px;font-weight:500;color:var(--heading-font-color);background:var(--background-color);transition:all .2s;text-decoration:none}
-  .hp-chip:hover{border-color:var(--brand-color);color:var(--brand-color);transform:translateY(-2px)}
-  .hp-section-title{font-family:'Space Mono',monospace;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:var(--text-alt-color);padding-bottom:16px;border-bottom:1px solid var(--border-color);margin-bottom:0}
-  .hp-pagehead .hp-lead a{color:var(--brand-color);text-decoration:none}
+  .hp-back:hover{color:var(--ik-brand)}
+  .hero__contact{margin-top:26px}
+  .hp-pagehead .hp-lead a{color:var(--ik-brand);text-decoration:none}
   .hp-pagehead .hp-lead a:hover{text-decoration:underline}
+  .hp-themes{margin-bottom:4px}
+  .hp-chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:44px}
+  .hp-chip{display:inline-flex;align-items:center;padding:10px 18px;border-radius:999px;font-size:.9rem;font-weight:500;color:var(--ik-navy-800);background:var(--ik-sky);text-decoration:none;transition:transform .2s var(--ik-ease),box-shadow .2s var(--ik-ease)}
+  .hp-chip:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(16,40,80,.10);color:var(--ik-navy-800)}
+  .hp-section-title{font-family:Inter,sans-serif;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--ik-brand-600);padding-bottom:16px;border-bottom:1px solid var(--border-color);margin-bottom:0}
   .hp-about{margin:4px 0 56px}
-  .hp-bio{font-size:19px;line-height:1.7;color:var(--text-color);max-width:680px;margin:0 0 36px}
-  .hp-blogcard{display:block;padding:26px 28px;border:1px solid var(--border-color);border-radius:18px;background:var(--background-color);text-decoration:none;transition:all .2s;max-width:680px}
-  .hp-blogcard:hover{border-color:var(--brand-color);transform:translateY(-2px);box-shadow:0 10px 30px rgba(83,63,235,.10)}
-  .hp-blogcard__label{display:block;font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--brand-color);margin-bottom:8px}
-  .hp-blogcard__title{display:block;font-family:'Source Serif 4',Georgia,serif;font-size:26px;font-weight:700;color:var(--heading-font-color);margin-bottom:6px}
-  .hp-blogcard__desc{display:block;font-size:15px;color:var(--text-alt-color);line-height:1.5}
+  .hp-bio{font-size:19px;line-height:1.75;color:var(--text-color);max-width:720px;margin:0}
 </style>
 <style id="ik-harmony">
-  /* --- Harmonize with istvankis.com splash: single light theme, serif headings --- */
+  /* --- Harmonized with coaching.istvankis.com + istvankis.com splash --- */
   :root{
-    --brand-color:#5a4bd0;--dark-blue:#1d2942;--gray:#5c6883;--light-gray:#e7e9f0;
-    --background-color:#f6f7fb;--text-color:#1d2942;--text-alt-color:#5c6883;
-    --heading-font-color:#1d2942;--link-color:#1d2942;--link-color-hover:#5a4bd0;
-    --border-color:rgba(29,42,66,.12);--button-color:#fff;
-    --button-background-color:#1d2942;--button-background-hover:#5a4bd0;
-    --tr-color:#eef0f6;--syntax-highlighting-background:#eef0f6;
+    --brand-color:#2563C9;--dark-blue:#14223C;--gray:#6B7A91;--light-gray:#E0E8F2;
+    --background-color:#F6F9FD;--text-color:#14223C;--text-alt-color:#45566F;
+    --heading-font-color:#14223C;--link-color:#14223C;--link-color-hover:#1E50A8;
+    --border-color:#E0E8F2;--button-color:#fff;
+    --button-background-color:#16345C;--button-background-hover:#2563C9;
+    --tr-color:#EBF1FA;--syntax-highlighting-background:#EBF1FA;
+    --ik-navy:#16345C;--ik-navy-800:#102A4F;--ik-brand:#1E50A8;--ik-brand-600:#2563C9;
+    --ik-sky:#E4EEFB;--ik-gold:#D7A53C;--ik-ease:cubic-bezier(.22,1,.36,1);--background-alt-color:#0B1E3B;--dark:#0B1E3B;
   }
-  body{background:var(--background-color);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--text-color)}
-  h1,h2,h3,h4,.hero__title,.article__title,.article__title a,.post__title,.post__title a,.page__title,.widget__title,.related__title,.post__content h1,.post__content h2,.post__content h3{font-family:"Source Serif 4",Georgia,serif !important;text-transform:none !important;letter-spacing:-.01em !important;font-weight:600}
-  .article__title,.article__title a,.post__title,.post__title a{font-weight:700;line-height:1.12}
+  body{background:var(--background-color);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--text-color);-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4,.hero__title,.article__title,.article__title a,.post__title,.post__title a,.page__title,.widget__title,.related__title,.post__content h1,.post__content h2,.post__content h3{font-family:"Source Serif 4",Georgia,serif !important;text-transform:none !important;letter-spacing:-.015em !important;font-weight:600;color:var(--heading-font-color)}
+  .article__title,.article__title a,.post__title,.post__title a{font-weight:700;line-height:1.14}
   a{color:var(--link-color)}
   a:hover{color:var(--link-color-hover)}
-  .article__meta,.post__meta,.article__minutes,.article__date,.article__tag{font-family:"Space Mono",monospace}
+  .article__meta,.post__meta,.article__minutes,.article__date{font-family:Inter,sans-serif;color:var(--text-alt-color);text-transform:uppercase;letter-spacing:.05em;font-size:.8rem}
+  .article__tag{font-family:Inter,sans-serif}
   /* language switch */
   .ik-en{display:none}
   [data-lang="en"] .ik-hu{display:none}
   [data-lang="en"] .ik-en{display:revert}
-  .nav__lang{display:flex;align-items:center;margin-left:6px}
-  .nav__lang .lang{display:inline-flex;border:1px solid var(--border-color);border-radius:999px;overflow:hidden;font-family:"Space Mono",monospace;font-size:12px;background:rgba(255,255,255,.6)}
-  .nav__lang .lang button{appearance:none;background:transparent;border:0;cursor:pointer;padding:6px 12px;color:var(--text-alt-color);letter-spacing:.1em;transition:color .25s,background .25s}
-  .nav__lang .lang button[aria-pressed="true"]{background:var(--dark-blue);color:#fff}
+  .nav__lang{display:flex;align-items:center;margin-left:8px}
+  .nav__lang .lang{display:inline-flex;border:1px solid var(--border-color);border-radius:999px;overflow:hidden;font-family:Inter,sans-serif;font-size:12px;font-weight:600;background:#fff}
+  .nav__lang .lang button{appearance:none;background:transparent;border:0;cursor:pointer;padding:6px 13px;color:var(--text-alt-color);letter-spacing:.08em;transition:color .25s,background .25s}
+  .nav__lang .lang button[aria-pressed="true"]{background:var(--ik-navy);color:#fff}
   .nav__lang .lang button:focus-visible{outline:2px solid var(--brand-color);outline-offset:2px}
 </style>
 </head>

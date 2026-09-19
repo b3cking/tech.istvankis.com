@@ -49,29 +49,32 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400..700&family=Space+Mono:wght@400;700&family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style id="ik-harmony">
-  /* --- Harmonize with istvankis.com splash: single light theme, serif headings --- */
+  /* --- Harmonized with coaching.istvankis.com + istvankis.com splash --- */
   :root{
-    --brand-color:#5a4bd0;--dark-blue:#1d2942;--gray:#5c6883;--light-gray:#e7e9f0;
-    --background-color:#f6f7fb;--text-color:#1d2942;--text-alt-color:#5c6883;
-    --heading-font-color:#1d2942;--link-color:#1d2942;--link-color-hover:#5a4bd0;
-    --border-color:rgba(29,42,66,.12);--button-color:#fff;
-    --button-background-color:#1d2942;--button-background-hover:#5a4bd0;
-    --tr-color:#eef0f6;--syntax-highlighting-background:#eef0f6;
+    --brand-color:#2563C9;--dark-blue:#14223C;--gray:#6B7A91;--light-gray:#E0E8F2;
+    --background-color:#F6F9FD;--text-color:#14223C;--text-alt-color:#45566F;
+    --heading-font-color:#14223C;--link-color:#14223C;--link-color-hover:#1E50A8;
+    --border-color:#E0E8F2;--button-color:#fff;
+    --button-background-color:#16345C;--button-background-hover:#2563C9;
+    --tr-color:#EBF1FA;--syntax-highlighting-background:#EBF1FA;
+    --ik-navy:#16345C;--ik-navy-800:#102A4F;--ik-brand:#1E50A8;--ik-brand-600:#2563C9;
+    --ik-sky:#E4EEFB;--ik-gold:#D7A53C;--ik-ease:cubic-bezier(.22,1,.36,1);--background-alt-color:#0B1E3B;--dark:#0B1E3B;
   }
-  body{background:var(--background-color);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--text-color)}
-  h1,h2,h3,h4,.hero__title,.article__title,.article__title a,.post__title,.post__title a,.page__title,.widget__title,.related__title,.post__content h1,.post__content h2,.post__content h3{font-family:"Source Serif 4",Georgia,serif !important;text-transform:none !important;letter-spacing:-.01em !important;font-weight:600}
-  .article__title,.article__title a,.post__title,.post__title a{font-weight:700;line-height:1.12}
+  body{background:var(--background-color);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--text-color);-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4,.hero__title,.article__title,.article__title a,.post__title,.post__title a,.page__title,.widget__title,.related__title,.post__content h1,.post__content h2,.post__content h3{font-family:"Source Serif 4",Georgia,serif !important;text-transform:none !important;letter-spacing:-.015em !important;font-weight:600;color:var(--heading-font-color)}
+  .article__title,.article__title a,.post__title,.post__title a{font-weight:700;line-height:1.14}
   a{color:var(--link-color)}
   a:hover{color:var(--link-color-hover)}
-  .article__meta,.post__meta,.article__minutes,.article__date,.article__tag{font-family:"Space Mono",monospace}
+  .article__meta,.post__meta,.article__minutes,.article__date{font-family:Inter,sans-serif;color:var(--text-alt-color);text-transform:uppercase;letter-spacing:.05em;font-size:.8rem}
+  .article__tag{font-family:Inter,sans-serif}
   /* language switch */
   .ik-en{display:none}
   [data-lang="en"] .ik-hu{display:none}
   [data-lang="en"] .ik-en{display:revert}
-  .nav__lang{display:flex;align-items:center;margin-left:6px}
-  .nav__lang .lang{display:inline-flex;border:1px solid var(--border-color);border-radius:999px;overflow:hidden;font-family:"Space Mono",monospace;font-size:12px;background:rgba(255,255,255,.6)}
-  .nav__lang .lang button{appearance:none;background:transparent;border:0;cursor:pointer;padding:6px 12px;color:var(--text-alt-color);letter-spacing:.1em;transition:color .25s,background .25s}
-  .nav__lang .lang button[aria-pressed="true"]{background:var(--dark-blue);color:#fff}
+  .nav__lang{display:flex;align-items:center;margin-left:8px}
+  .nav__lang .lang{display:inline-flex;border:1px solid var(--border-color);border-radius:999px;overflow:hidden;font-family:Inter,sans-serif;font-size:12px;font-weight:600;background:#fff}
+  .nav__lang .lang button{appearance:none;background:transparent;border:0;cursor:pointer;padding:6px 13px;color:var(--text-alt-color);letter-spacing:.08em;transition:color .25s,background .25s}
+  .nav__lang .lang button[aria-pressed="true"]{background:var(--ik-navy);color:#fff}
   .nav__lang .lang button:focus-visible{outline:2px solid var(--brand-color);outline-offset:2px}
 </style>
 </head>
