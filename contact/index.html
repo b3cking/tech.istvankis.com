@@ -327,7 +327,7 @@
 <div class="container animate">
 
   <div class="page__info">
-    <h1 class="page__title">Contact</h1>
+    <h1 class="page__title"><span class="ik-hu">Kapcsolat</span><span class="ik-en">Contact</span></h1>
   </div>
 
   <article class="page">
@@ -335,24 +335,24 @@
       <div class="form-box">
   <div class="contact-head">
     
-    <p class="page-description">Feel free to use the form below, or contact me via a social site linked at the bottom.</p>
+    <p class="page-description"><span class="ik-hu">Nyugodtan használd az alábbi űrlapot, vagy keress a lap alján linkelt közösségi oldalak valamelyikén.</span><span class="ik-en">Feel free to use the form below, or contact me via a social site linked at the bottom.</span></p>
     
   </div>
   <form class="form" action="https://formspree.io/f/mayayvvn" method="POST">
     <div class="form__group">
-      <label class="form__label screen-reader-text" for="form-name">Your Name</label>
-      <input class="form__input" id="form-name" type="text" name="name" placeholder="Name" required="" />
+      <label class="form__label screen-reader-text" for="form-name"><span class="ik-hu">Neved</span><span class="ik-en">Your Name</span></label>
+      <input class="form__input" id="form-name" type="text" name="name" placeholder="Név" data-ph-hu="Név" data-ph-en="Name" required="" />
     </div>
     <div class="form__group">
-      <label class="form__label screen-reader-text" for="form-email">Your Email</label>
-      <input class="form__input" id="form-email" type="email" name="_replyto" placeholder="Email" required="" />
+      <label class="form__label screen-reader-text" for="form-email"><span class="ik-hu">E-mail címed</span><span class="ik-en">Your Email</span></label>
+      <input class="form__input" id="form-email" type="email" name="_replyto" placeholder="E-mail cím" data-ph-hu="E-mail cím" data-ph-en="Email" required="" />
     </div>
     <div class="form__group">
-      <label class="form__label screen-reader-text" for="form-text">Your Message</label>
-      <textarea class="form__input" id="form-text" name="text" rows="10" placeholder="Message" required=""></textarea>
+      <label class="form__label screen-reader-text" for="form-text"><span class="ik-hu">Üzeneted</span><span class="ik-en">Your Message</span></label>
+      <textarea class="form__input" id="form-text" name="text" rows="10" placeholder="Üzenet" data-ph-hu="Üzenet" data-ph-en="Message" required=""></textarea>
     </div>
     <div class="form__group">
-      <button class="button" type="submit">Send Message</button>
+      <button class="button" type="submit"><span class="ik-hu">Üzenet küldése</span><span class="ik-en">Send Message</span></button>
     </div>
   </form>
 </div>
@@ -458,6 +458,7 @@
   <script src="/js/scripts.js"></script>
   
 <script>(function(){var b=document.querySelectorAll('.nav__lang .lang button');if(!b.length)return;function set(l){document.documentElement.setAttribute('data-lang',l);b.forEach(function(x){x.setAttribute('aria-pressed',x.dataset.set===l);});try{localStorage.setItem('ik-lang',l);}catch(e){}}b.forEach(function(x){x.addEventListener('click',function(){set(x.dataset.set);});});var cur=document.documentElement.getAttribute('data-lang')||'hu';b.forEach(function(x){x.setAttribute('aria-pressed',x.dataset.set===cur);});})();</script>
+<script>(function(){function ph(){var l=document.documentElement.getAttribute("data-lang")||"hu";document.querySelectorAll("[data-ph-"+l+"]").forEach(function(e){e.setAttribute("placeholder",e.getAttribute("data-ph-"+l));});}ph();new MutationObserver(ph).observe(document.documentElement,{attributes:true,attributeFilter:["data-lang"]});})();</script>
 </body>
 
 </html>
