@@ -258,6 +258,26 @@ $(document).ready(function() {
 
 
   /* =======================
+  // Click-to-load video embeds
+  ======================= */
+  $(document).on("click keydown", ".video-facade", function(e) {
+    if (e.type === "keydown" && e.which !== 13 && e.which !== 32) return;
+    e.preventDefault();
+    var src = this.getAttribute("data-src");
+    if (!src) return;
+    src += (src.indexOf("?") === -1 ? "?" : "&") + "autoplay=1";
+    var iframe = document.createElement("iframe");
+    iframe.src = src;
+    iframe.title = this.getAttribute("data-title") || "";
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+    iframe.setAttribute("allowfullscreen", "");
+    iframe.style.cssText = "position:absolute;top:0;left:0;width:100%;height:100%;";
+    this.parentNode.replaceChild(iframe, this);
+  });
+
+
+  /* =======================
   // Zoom Image
   ======================= */
   $(".page img, .post img").attr("data-action", "zoom");
