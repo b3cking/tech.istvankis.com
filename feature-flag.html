@@ -394,7 +394,15 @@
 
 <p>Use your favourite IDE, and try it out.</p>
 
-<iframe src="https://pastebin.com/embed_iframe/13A2DP52" style="border:none;width:100%;height:210px"></iframe>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import configcatclient
+
+# client settings with token
+configcat_client = configcatclient.create_client(
+    'THIS_IS_YOUR_TOKEN_CHANGE_IT')
+feature3 = configcat_client.get_value('feature3', False)
+
+print("Feature 3 is live:" + str(feature3))
+</code></pre></div></div>
 
 <p>If this works, the good old if-else statements do the rest of the magic, and marketing specialist, business owners can switch features on and off from now on by a single click.</p>
 
